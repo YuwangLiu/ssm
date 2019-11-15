@@ -31,5 +31,5 @@
     <mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/" />
 
     <!-- 4.扫描web相关的bean -->
-    <context:component-scan base-package="com.fengwenyi.demo.ssm.controller" />
+    <context:component-scan base-package="com.nari.demo.ssm.controller" />
 </beans>
