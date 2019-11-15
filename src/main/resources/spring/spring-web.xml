@@ -24,7 +24,7 @@
     <mvc:default-servlet-handler />
 
     <!--重要！将你的SwaggerConfig配置类注入-->
-    <bean class="com.nari.demo.ssm.config.SwaggerConfig"/>
+    <bean class="com.nari.demo.config.SwaggerConfig"/>
 
     <!--重要！配置swagger资源不被拦截-->
     <mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/" />

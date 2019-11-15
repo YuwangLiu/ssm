@@ -1,4 +1,4 @@
-package com.nari.demo.ssm.controller;
+package com.nari.demo.controller;
 
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;

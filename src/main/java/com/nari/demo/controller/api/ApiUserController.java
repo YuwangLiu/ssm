@@ -1,8 +1,8 @@
-package com.nari.demo.ssm.controller.api;
+package com.nari.demo.controller.api;
 
-import com.nari.demo.ssm.domain.User;
-import com.nari.demo.ssm.service.IUserService;
-import com.nari.demo.ssm.config.ReturnCode;
+import com.nari.demo.entity.User;
+import com.nari.demo.service.IUserService;
+import com.nari.demo.config.ReturnCode;
 import com.fengwenyi.javalib.result.Result;
 import com.google.gson.Gson;
 import io.swagger.annotations.Api;

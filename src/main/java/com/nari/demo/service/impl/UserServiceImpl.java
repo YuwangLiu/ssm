@@ -1,8 +1,8 @@
-package com.nari.demo.ssm.service.impl;
+package com.nari.demo.service.impl;
 
-import com.nari.demo.ssm.dao.IUserDao;
-import com.nari.demo.ssm.domain.User;
-import com.nari.demo.ssm.service.IUserService;
+import com.nari.demo.dao.IUserDao;
+import com.nari.demo.service.IUserService;
+import com.nari.demo.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

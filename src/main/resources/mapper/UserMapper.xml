@@ -2,16 +2,16 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.nari.demo.ssm.dao.IUserDao">
+<mapper namespace="com.nari.demo.dao.IUserDao">
 
     <!-- List<User> getUsers(); -->
-    <select id="getUsers" resultType="User">
+    <select id="getUsers" resultType="com.nari.demo.entity.User">
         SELECT <include refid="column" />
         FROM <include refid="tName"/>
     </select>
 
     <!--User getUserById(@Param("id") Integer id);-->
-    <select id="getUserById" resultType="User">
+    <select id="getUserById" resultType="com.nari.demo.entity.User">
         SELECT <include refid="column" />
         FROM <include refid="tName"/>
         <where>

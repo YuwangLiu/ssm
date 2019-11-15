@@ -1,6 +1,6 @@
-package com.nari.demo.ssm.service;
+package com.nari.demo.service;
 
-import com.nari.demo.ssm.domain.User;
+import com.nari.demo.entity.User;
 
 import java.util.List;
 

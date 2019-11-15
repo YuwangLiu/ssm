@@ -1,4 +1,4 @@
-package com.nari.demo.ssm.config;
+package com.nari.demo.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

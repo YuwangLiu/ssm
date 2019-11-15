@@ -1,4 +1,4 @@
-package com.nari.demo.ssm.domain;
+package com.nari.demo.entity;
 
 /**
  * @author liuyuwang

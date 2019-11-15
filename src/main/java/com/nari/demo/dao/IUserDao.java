@@ -1,6 +1,6 @@
-package com.nari.demo.ssm.dao;
+package com.nari.demo.dao;
 
-import com.nari.demo.ssm.domain.User;
+import com.nari.demo.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
