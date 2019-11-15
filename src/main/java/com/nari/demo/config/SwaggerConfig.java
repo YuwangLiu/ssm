@@ -23,7 +23,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.nari.demo.ssm.controller.api"))
+                .apis(RequestHandlerSelectors.basePackage("com.nari.demo.controller.api"))
                 .paths(PathSelectors.any())
                 .build();
     }
