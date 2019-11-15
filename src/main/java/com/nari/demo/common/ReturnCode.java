@@ -1,12 +1,10 @@
-package com.nari.demo.config;
-
-import com.fengwenyi.javalib.result.IReturnCode;
+package com.nari.demo.common;
 
 /**
  * @author liuyuwang
  */
 
-public enum ReturnCode implements IReturnCode {
+public enum ReturnCode {
 
     /**
      * 错误码
@@ -28,12 +26,10 @@ public enum ReturnCode implements IReturnCode {
         this.msg = msg;
     }
 
-    @Override
     public int getCode() {
         return code;
     }
 
-    @Override
     public String getMsg() {
         return msg;
     }

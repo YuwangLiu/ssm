@@ -1,10 +1,9 @@
 package com.nari.demo.controller.api;
 
+import com.nari.demo.common.Result;
+import com.nari.demo.common.ReturnCode;
 import com.nari.demo.entity.User;
 import com.nari.demo.service.IUserService;
-import com.nari.demo.config.ReturnCode;
-import com.fengwenyi.javalib.result.Result;
-import com.google.gson.Gson;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -31,16 +30,16 @@ public class ApiUserController {
 
     @ApiOperation(value = "获取所有用户", notes = "获取所有用户及详细信息")
     @GetMapping("/all")
-    public String getUsers () {
+    public Result getUsers () {
         Result result = new Result();
         List<User> users = userService.getUsers();
         result.setData(ReturnCode.SUCCESS, users);
-        return new Gson().toJson(result);
+        return result;
     }
 
     @ApiOperation(value = "获取用户", notes = "通过Id获取用户详细信息")
     @GetMapping("/{id}")
-    public String getUserById (@ApiParam(name = "id", value = "Id", required = true) @PathVariable("id") Integer id) {
+    public Result getUserById (@ApiParam(name = "id", value = "Id", required = true) @PathVariable("id") Integer id) {
         Result result = new Result();
         if (id != null && id > 0) {
             User user = userService.getUserById(id);
@@ -48,12 +47,12 @@ public class ApiUserController {
         } else {
             result.setResult(ReturnCode.ERROR);
         }
-        return new Gson().toJson(result);
+        return result;
     }
 
     @ApiOperation(value = "添加用户", notes = "添加用户")
     @PostMapping("/add")
-    public String add (@ApiParam(name = "name", value = "姓名", required = true) @RequestParam("name") String name,
+    public Result add (@ApiParam(name = "name", value = "姓名", required = true) @RequestParam("name") String name,
                        @ApiParam(name = "age", value = "年龄", required = true) @RequestParam("age") Integer age) {
         Result result = new Result();
         if (name != null
@@ -74,12 +73,12 @@ public class ApiUserController {
         } else {
             result.setResult(ReturnCode.ERROR);
         }
-        return new Gson().toJson(result);
+        return result;
     }
 
     @ApiOperation(value = "修改用户信息", notes = "通过Id获取用户详细信息")
     @PutMapping("/update/{id}")
-    public String update (@ApiParam(name = "id", value = "Id", required = true)
+    public Result update (@ApiParam(name = "id", value = "Id", required = true)
                                 @PathVariable("id") Integer id,
                           @ApiParam(name = "name", value = "姓名", required = false)
                                 @RequestParam(value = "name", required = false) String name,
@@ -107,14 +106,14 @@ public class ApiUserController {
         } else {
             result.setResult(ReturnCode.ERROR);
         }
-        return new Gson().toJson(result);
+        return result;
     }
 
 
 
     @ApiOperation(value = "删除用户", notes = "通过Id删除用户")
     @DeleteMapping("/delete/{id}")
-    public String delete (@ApiParam(name = "id", value = "Id", required = true) @PathVariable("id") Integer id) {
+    public Result delete (@ApiParam(name = "id", value = "Id", required = true) @PathVariable("id") Integer id) {
         Result result = new Result();
         if (id != null && id > 0) {
             Integer rsNum = userService.delete(id);
@@ -128,7 +127,7 @@ public class ApiUserController {
         } else {
             result.setResult(ReturnCode.ERROR);
         }
-        return new Gson().toJson(result);
+        return result;
     }
 
     @ApiIgnore
