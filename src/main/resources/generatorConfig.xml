@@ -22,7 +22,7 @@
 
         <!--jdbc的数据库连接-->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/webchat?useUnicode=true"
+                        connectionURL="jdbc:mysql://localhost:3306/webchat?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false"
                         userId="root"
                         password="123456">
         </jdbcConnection>
@@ -50,7 +50,7 @@
         </javaModelGenerator>
 
         <!-- targetPackage 和 targetProject：生成的 mapper 文件的包和位置 -->
-        <sqlMapGenerator targetPackage="mapper"
+        <sqlMapGenerator targetPackage="mappers"
                          targetProject="src/main/resources">
             <!-- 针对数据库的一个配置，是否把 schema 作为字包名 -->
             <property name="enableSubPackages" value="false" />
